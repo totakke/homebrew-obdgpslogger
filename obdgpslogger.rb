@@ -9,8 +9,9 @@ class Obdgpslogger < Formula
   depends_on 'gpsd'
   depends_on 'fltk'
 
-  def patches
-    { :p0 => 'https://gist.github.com/totakke/5574940/raw/8358a4622a5a0aa219e3d281059b48810c18f0e6/obdgpslogger-gpsd3.9-fltk1.3.2.patch' }
+  patch :p0 do
+    url "https://gist.github.com/totakke/5574940/raw/8358a4622a5a0aa219e3d281059b48810c18f0e6/obdgpslogger-gpsd3.9-fltk1.3.2.patch"
+    sha256 "0ce82045a1aaccd426b5eb4e697582718aa2c525019825f189fe657fbbd87e4d"
   end
 
   def install
